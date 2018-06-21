@@ -18,7 +18,7 @@ export class PostsComponent implements OnInit {
 
   posts: Posts[] = [];
 
-  constructor(private postsService: PostsService, private router: Router) {}
+  constructor(private postsService: PostsService, private router: Router) { }
 
   ngOnInit() {
     this.loadPosts();
@@ -32,9 +32,8 @@ export class PostsComponent implements OnInit {
       });
   }
 
-  pagePostsUser(){
-    
-    //this.router.navigate([`posts?usesrId=${this.posts.userId}`])
+  openPostsUserPage(){
+    this.router.navigate([`user/:userId`]);
   }
 
 }

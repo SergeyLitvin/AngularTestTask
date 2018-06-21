@@ -8,6 +8,7 @@ const appRoutes: Routes = [
   { path: '', component: PostsComponent},
   { path: 'user', component: PostsUserComponent},
   { path: 'photos', component: PhotosComponent},
+  { path: 'user/:userId', component: PostsUserComponent}
 ];
 
 @NgModule({

@@ -10,8 +10,8 @@ export class PostsService {
       .map((response: Response) => response.json());
   }
 
-  getUser() {
-    return this.http.get('http://jsonplaceholder.typicode.com/users/')
+  getUserPosts(userId) {
+    return this.http.get('http://jsonplaceholder.typicode.com/posts?userId=1')
       .map((response: Response) => response.json());
   }
 }

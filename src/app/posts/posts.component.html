@@ -2,6 +2,6 @@
 <hr>
 <ul class="list-group">
 <li class="list-group-item clearfix" *ngFor="let post of posts">
-<a routerLink="{{ post.userId }}" (click)="pagePostsUser()">{{ post.title }}</a><span class="badge">{{post.id}}</span>
+  <a [routerLink]="['/user', post.userId]">{{ post.title }}</a><span class="badge">{{post.id}}</span>
 </li>
 </ul>
