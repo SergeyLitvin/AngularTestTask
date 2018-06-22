@@ -11,7 +11,7 @@ export class PostsService {
   }
 
   getUserPosts(userId) {
-    return this.http.get('http://jsonplaceholder.typicode.com/posts?userId=1')
+    return this.http.get(`http://jsonplaceholder.typicode.com/posts?userId=${userId}`)
       .map((response: Response) => response.json());
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { PostsService } from '../posts.service';
 
 
@@ -19,12 +19,21 @@ export class PostsUserComponent implements OnInit {
   userId: string;
   userPosts: UserPosts[] = [];
 
-  constructor(private postsService: PostsService, private route: ActivatedRoute) {}
+  constructor(private postsService: PostsService, public route: ActivatedRoute) {
+    this.userId = this.route.snapshot.params['userId'];
+  }
 
 
   ngOnInit() {
-
+    this.loadUserPosts(this.userId);
   }
 
+  loadUserPosts(userId) {
+    this.postsService
+      .getUserPosts(userId)
+      .subscribe((userPosts: UserPosts[]) => {
+        this.userPosts = userPosts;
+      });
+  }
 
 }

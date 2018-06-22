@@ -1,1 +1,7 @@
 <h2>Посты пользователя {{ userId }}</h2>
+<hr>
+<ul class="list-group">
+  <li class="list-group-item clearfix" *ngFor="let post of userPosts">
+    <a [routerLink]="['/user', post.userId]">{{ post.title }}</a><span class="badge">{{post.id}}</span>
+  </li>
+</ul>

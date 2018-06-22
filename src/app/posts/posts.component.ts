@@ -31,9 +31,4 @@ export class PostsComponent implements OnInit {
         this.posts = posts;
       });
   }
-
-  openPostsUserPage(){
-    this.router.navigate([`user/:userId`]);
-  }
-
 }
