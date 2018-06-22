@@ -1,0 +1,16 @@
+.list-group-item {
+  position: relative;
+}
+.list-group-item .title {
+  text-align: left;
+}
+
+.list-group-item img {
+  float: right;
+}
+
+.list-group-item .badge {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}

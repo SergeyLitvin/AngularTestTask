@@ -16,7 +16,6 @@ export class PostsService {
   }
 
   getPhotos() {
-    return this.http.get('http://jsonplaceholder.typicode.com/photos/')
-      .map((response: Response) => response.json());
+    return this.http.get('http://jsonplaceholder.typicode.com/photos').map((response: Response) => response.json());
   }
 }
