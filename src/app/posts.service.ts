@@ -14,4 +14,9 @@ export class PostsService {
     return this.http.get(`http://jsonplaceholder.typicode.com/posts?userId=${userId}`)
       .map((response: Response) => response.json());
   }
+
+  getPhotos() {
+    return this.http.get('http://jsonplaceholder.typicode.com/photos/')
+      .map((response: Response) => response.json());
+  }
 }
