@@ -9,6 +9,7 @@ import { PostsUserComponent } from './posts-user/posts-user.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PostsComponent } from './posts/posts.component';
 import {AppRoutingModule} from './app-routing.module';
+import { UsersComponent } from './users/users.component';
 
 
 
@@ -17,7 +18,8 @@ import {AppRoutingModule} from './app-routing.module';
     AppComponent,
     PostsUserComponent,
     PhotosComponent,
-    PostsComponent
+    PostsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
